@@ -7,7 +7,7 @@ export default function Navbar({ theme, toggleTheme }: { theme: 'light' | 'dark'
   const activeIndex = 0;
 
   return (
-    <nav className={`w-full h-[56px] flex items-center justify-between px-2 sm:px-4 md:px-6 ${theme === 'dark' ? 'bg-[#18181b] border-gray-800' : 'bg-white border-gray-100'} border-b`}>
+    <nav className={`w-full h-[56px] flex items-center justify-between px-2 sm:px-4 md:px-6 ${theme === 'dark' ? 'bg-[#18181b] border-gray-800' : 'bg-white border-gray-100'} border-b fixed top-0 left-0 right-0 z-50 shadow-sm`}>
       <div className="flex items-center gap-2 sm:gap-3">
         <div className={`flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-lg border ${theme === 'dark' ? 'bg-[#23232a] border-gray-700' : 'bg-gray-50 border-gray-200'}`}>
           <Image src="/icons/logo.svg" alt="Krea AI Logo" width={22} height={22} className={theme === 'dark' ? 'invert brightness-200' : ''} />
@@ -18,7 +18,7 @@ export default function Navbar({ theme, toggleTheme }: { theme: 'light' | 'dark'
             alt="Profile" 
             width={20} 
             height={20} 
-            className="w-5 h-5 sm:w-6 sm:h-6 rounded-full object-cover border border-gray-200 dark:border-gray-700" 
+            className={`w-5 h-5 sm:w-6 sm:h-6 rounded-full object-cover border border-gray-200 dark:border-gray-700 ${theme === 'dark' ? 'invert brightness-200' : ''}`} 
           />
           <span className={`font-medium text-xs sm:text-sm md:text-base truncate max-w-[100px] sm:max-w-[140px] md:max-w-full ${theme === 'dark' ? 'text-gray-100' : 'text-gray-900'}`}>
             benevolentintim8ekbot
@@ -75,11 +75,9 @@ export default function Navbar({ theme, toggleTheme }: { theme: 'light' | 'dark'
         </div>
       </div>
       
-      {/* Spacer for small screens to ensure proper alignment */}
       <div className="flex-1 md:hidden"></div>
 
       <div className="flex items-center gap-1 sm:gap-2 justify-end">
-        {/* Right nav links - only visible on md screens and above */}
         <div className="hidden md:flex items-center gap-2">
           {rightNavLinks.map((link) => (
             <a
@@ -103,7 +101,29 @@ export default function Navbar({ theme, toggleTheme }: { theme: 'light' | 'dark'
           ))}
         </div>
         
-        {/* Theme toggle - visible on all screen sizes */}
+        <button
+          className={`w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-full transition ${
+            theme === 'dark' ? 'hover:bg-[#23232a]' : 'hover:bg-gray-100'
+          }`}
+          aria-label="Notifications"
+        >
+          <svg 
+            width="16" 
+            height="16" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            className={theme === 'dark' ? '' : 'invert brightness-200'}
+          >
+            <path 
+              d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0" 
+              stroke="currentColor" 
+              strokeWidth="2" 
+              strokeLinecap="round" 
+              strokeLinejoin="round"
+            />
+          </svg>
+        </button>
+        
         <button
           className={`w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-full transition ${
             theme === 'dark' ? 'hover:bg-[#23232a]' : 'hover:bg-gray-100'
@@ -118,7 +138,21 @@ export default function Navbar({ theme, toggleTheme }: { theme: 'light' | 'dark'
           )}
         </button>
         
-        {/* Mobile menu button - only shown on smaller screens */}
+        <button
+          className={`w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-full overflow-hidden transition ${
+            theme === 'dark' ? 'hover:bg-[#23232a]' : 'hover:bg-gray-100'
+          }`}
+          aria-label="User menu"
+        >
+          <Image 
+            src="/icons/profile.svg" 
+            alt="Profile" 
+            width={20} 
+            height={20} 
+            className={`w-5 h-5 sm:w-6 sm:h-6 rounded-full object-cover border border-gray-200 dark:border-gray-700 ${theme === 'dark' ? 'invert brightness-200' : ''}`}
+          />
+        </button>
+        
         <button 
           className={`md:hidden w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-full transition ${
             theme === 'dark' ? 'hover:bg-[#23232a]' : 'hover:bg-gray-100'
@@ -146,7 +180,6 @@ export default function Navbar({ theme, toggleTheme }: { theme: 'light' | 'dark'
   );
 }
 
-// Adding CSS for hide-scrollbar in both components
 <style jsx global>{`
   .hide-scrollbar::-webkit-scrollbar {
     display: none;

@@ -5,7 +5,6 @@ interface GalleryProps {
 }
 
 export default function Gallery({ theme = 'light' }: GalleryProps) {
-  // Sample gallery features - you can replace these with actual data from your constants
   const galleryFeatures = [
     {
       title: "WAN 2.2",

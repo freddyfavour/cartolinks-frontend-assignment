@@ -36,10 +36,10 @@ export default function Home() {
   return (
     <div className={`min-h-screen flex flex-col ${theme === 'dark' ? 'bg-[#18181b]' : 'bg-[#f8f8fa]'}`}>
       <Navbar theme={theme} toggleTheme={toggleTheme} />
-      <main className="flex flex-col flex-1">
+      <main className="flex flex-col flex-1 pt-[56px] mb-10">
         <Carousel theme={theme} />
         <Generate theme={theme} />
-        <Gallery />
+        <Gallery theme={theme} />
       </main>
       <Footer />
     </div>

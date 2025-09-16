@@ -1,4 +1,11 @@
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Black background with rounded corners -->
   <rect width="32" height="32" rx="8" fill="#000"/>
-  <path d="M10 10h4v12h-4zM18 10h4v12h-4z" fill="#fff"/>
+  
+  <!-- Elegant K letter in white -->
+  <path d="M11 7.5v17M11 16.5l9.5 8M11 15.5l9.5-8" 
+        stroke="white" 
+        stroke-width="3" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
 </svg>
