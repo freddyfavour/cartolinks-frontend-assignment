@@ -8,7 +8,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="flex items-center gap-2">
-        <span className="text-base">curated by Mobbin</span>
+        <span className="text-base">curated by Mobbing</span>
       </div>
     </footer>
   );
