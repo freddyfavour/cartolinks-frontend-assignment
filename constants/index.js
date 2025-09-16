@@ -57,7 +57,7 @@ export const generateFeatures = [
     desc: "Make images with custom styles like Pixar and Ideogram.",
     icon: "/icons/image.svg",
     open: true,
-    href: "/image",
+    href: "/",
     bgColor: "bg-blue-500",
   },
   {
@@ -65,7 +65,7 @@ export const generateFeatures = [
     desc: "Generate videos with Haiku, Pika, Runway, Luma, and more.",
     icon: "/icons/video.svg",
     open: true,
-    href: "/video",
+    href: "/",
     bgColor: "bg-amber-500",
   },
   {
@@ -73,7 +73,7 @@ export const generateFeatures = [
     desc: "Realtime AI rendering on a canvas. Instant feedback loop.",
     icon: "/icons/realtime.svg",
     open: true,
-    href: "/realtime",
+    href: "/",
     bgColor: "bg-cyan-500",
   },
   {
@@ -81,7 +81,7 @@ export const generateFeatures = [
     desc: "Upscale and restore images and videos up to 2K.",
     icon: "/icons/enhancer.svg",
     open: true,
-    href: "/enhancer",
+    href: "/",
     bgColor: "bg-slate-500",
   },
   {
@@ -89,7 +89,7 @@ export const generateFeatures = [
     desc: "Edit, remove backgrounds, fine-tune with prompts.",
     icon: "/icons/edit.svg",
     open: true,
-    href: "/edit",
+    href: "/",
     bgColor: "bg-purple-500",
   },
   {
@@ -97,7 +97,7 @@ export const generateFeatures = [
     desc: "Sync lips to any video + any audio.",
     icon: "/icons/videoLipsync.svg",
     open: true,
-    href: "/video-lipsync",
+    href: "/",
     bgColor: "bg-green-500",
   },
   {
@@ -105,7 +105,7 @@ export const generateFeatures = [
     desc: "Transfer motion to images and animate characters.",
     icon: "/icons/motionTransfer.svg",
     open: true,
-    href: "/motion-transfer",
+    href: "/",
     bgColor: "bg-red-500",
   },
   {
@@ -113,13 +113,13 @@ export const generateFeatures = [
     desc: "Train the model on custom faces, products, or styles.",
     icon: "/icons/train.svg",
     open: true,
-    href: "/train",
+    href: "/",
     bgColor: "bg-rose-500",
   },
 ]
 
 export const footerLinks = [
-  { label: "Gallery", href: "/gallery" },
-  { label: "Legal", href: "/legal" },
-  { label: "Pricing", href: "/pricing" },
+  { label: "Gallery", href: "/" },
+  { label: "Legal", href: "/" },
+  { label: "Pricing", href: "/" },
 ]
