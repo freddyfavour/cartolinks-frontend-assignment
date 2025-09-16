@@ -58,6 +58,7 @@ export const generateFeatures = [
     icon: "/icons/image.svg",
     open: true,
     href: "/image",
+    bgColor: "bg-blue-500",
   },
   {
     title: "Video",
@@ -65,6 +66,7 @@ export const generateFeatures = [
     icon: "/icons/video.svg",
     open: true,
     href: "/video",
+    bgColor: "bg-amber-500",
   },
   {
     title: "Realtime",
@@ -72,6 +74,7 @@ export const generateFeatures = [
     icon: "/icons/realtime.svg",
     open: true,
     href: "/realtime",
+    bgColor: "bg-cyan-500",
   },
   {
     title: "Enhancer",
@@ -79,6 +82,7 @@ export const generateFeatures = [
     icon: "/icons/enhancer.svg",
     open: true,
     href: "/enhancer",
+    bgColor: "bg-slate-500",
   },
   {
     title: "Edit",
@@ -86,20 +90,23 @@ export const generateFeatures = [
     icon: "/icons/edit.svg",
     open: true,
     href: "/edit",
+    bgColor: "bg-purple-500",
   },
   {
     title: "Video LipSync",
     desc: "Sync lips to any video + any audio.",
-    icon: "/icons/lipsync.svg",
+    icon: "/icons/videoLipsync.svg",
     open: true,
     href: "/video-lipsync",
+    bgColor: "bg-green-500",
   },
   {
     title: "Motion Transfer",
     desc: "Transfer motion to images and animate characters.",
-    icon: "/icons/motion.svg",
+    icon: "/icons/motionTransfer.svg",
     open: true,
     href: "/motion-transfer",
+    bgColor: "bg-red-500",
   },
   {
     title: "Train",
@@ -107,6 +114,7 @@ export const generateFeatures = [
     icon: "/icons/train.svg",
     open: true,
     href: "/train",
+    bgColor: "bg-rose-500",
   },
 ]
 

@@ -37,8 +37,8 @@ export default function Home() {
     <div className={`min-h-screen flex flex-col ${theme === 'dark' ? 'bg-[#18181b]' : 'bg-[#f8f8fa]'}`}>
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <main className="flex flex-col flex-1">
-        <Carousel />
-        <Generate />
+        <Carousel theme={theme} />
+        <Generate theme={theme} />
         <Gallery />
       </main>
       <Footer />
